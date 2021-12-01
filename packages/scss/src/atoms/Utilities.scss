@@ -1,0 +1,17 @@
+@import "foundation/all";
+
+@each $size, $value in $spacing {
+    .dsc-width-#{$size} {
+        width: $value;
+    }
+
+    .dsc-height-#{$size} {
+        height: $value;
+    }
+}
+
+@each $color, $value in $colors {
+  .dsc-color-#{$color} {
+      width: $value;
+  }
+}

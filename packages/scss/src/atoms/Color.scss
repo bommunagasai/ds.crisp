@@ -1,0 +1,8 @@
+@import "foundation/all";
+
+
+@each $color, $value in $colors {
+  .dsc-bg-color-#{$color} {
+      background: $value;
+  }
+}

@@ -1,10 +1,15 @@
 {
-  "name": "@ds.crisp/core",
+  "name": "@ds.crisp/root",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/bommunagasai/ds.crisp.git",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "start-storybook": "yarn lerna run storybook",
+    "build": "yarn lerna run build",
+    "dev": "yarn lerna run dev"
+  },
   "devDependencies": {
     "lerna": "^4.0.0"
   },

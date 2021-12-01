@@ -1,0 +1,163 @@
+/*=============================================
+    #Variables
+=============================================*/
+/**
+ * TABLE OF CONTENTS
+ * 
+ * COLORS
+ * Brand colors...................These are the main brand colors. They will be used the most
+ * Neutral colors.................White and black, gray scale, secondary colors.
+ * Utility colors.................Other colors to represent states: info, warning, success, etc.
+ * 
+ * TYPOGRAPHY
+ * Font families..................The fonts used in the design system.
+ * Font weights...................Font weights
+ * Sizes..........................Font sizing for body text, paragraphs, inputs
+ * Heading sizes..................Font sizing for page headings
+ *
+ * BREAKPOINTS
+ * Breakpoints....................Global responsive breakpoints definitions.
+ *
+ * SPACING
+ * Spacing........................Global fixed set of spacing variables
+ */
+/*=============================================
+=                  Colors                     =
+=============================================*/
+/* Brand Colors */
+/* Neutral Colors */
+/* Utility colors */
+/*=====  End of Colors  ======*/
+/*=============================================
+=                Typography                   =
+=============================================*/
+/**
+ *
+ * 1) The playfair font. We'll use this for headings mostly.
+ *     https://fonts.google.com/specimen/Playfair+Display
+ *
+ * 2) The raleway font. We'll use this for the body text.
+ *     https://fonts.google.com/specimen/Raleway
+ */
+/* Font families */
+/* 1 */
+/* 2 */
+/* Font sizes */
+/* Heading font sizes */
+/* Font weights */
+/*=====  End of Typography  ======*/
+/*=============================================
+=            Breakpoints                      =
+=============================================*/
+/*=====  End of Breakpoints  ======*/
+/*=============================================
+=            Spacing                          =
+=============================================*/
+/*=====  End of Spacing  ======*/
+/*=============================================
+=            Foundation - colors              =
+=============================================*/
+/**
+ * This file defines the actual colors that will be used for styling. They will default to the palette
+ * we defined in the _variable.scss file. This is our default palette, and devs can override this
+ * with their own variables.
+ */
+/*=============================================
+=            Global background colors         =
+=============================================*/
+/*=============================================
+=            Mixins                           =
+=============================================*/
+/**
+ *
+ * Helpful reusable function-like things that will be used to implement
+ * styles for components.
+ *
+ */
+.dsc-bg-color-blue {
+  background: #5e75fb;
+}
+
+.dsc-bg-color-zero {
+  background: #0b132b;
+}
+
+.dsc-bg-color-white {
+  background: #fff;
+}
+
+.dsc-bg-color-dark {
+  background: #1f2456;
+}
+
+.dsc-bg-color-dark-blue {
+  background: #4643d3;
+}
+
+.dsc-bg-color-medium-blue {
+  background: #475ddb;
+}
+
+.dsc-bg-color-dark-gray {
+  background: #444657;
+}
+
+.dsc-bg-color-metal {
+  background: #88929f;
+}
+
+.dsc-bg-color-gray {
+  background: #a1acb3;
+}
+
+.dsc-bg-color-medium-gray {
+  background: #bdc5ca;
+}
+
+.dsc-bg-color-light-gray {
+  background: #ced3d6;
+}
+
+.dsc-bg-color-light {
+  background: #ced3d6;
+}
+
+.dsc-bg-color-shine {
+  background: #fafafc;
+}
+
+.dsc-bg-color-red {
+  background: #ff647c;
+}
+
+.dsc-bg-color-light-red {
+  background: #fff2f9;
+}
+
+.dsc-bg-color-yellow {
+  background: #ffb800;
+}
+
+.dsc-bg-color-light-yellow {
+  background: #fff9de;
+}
+
+.dsc-bg-color-green {
+  background: #3bc171;
+}
+
+.dsc-bg-color-light-green {
+  background: #ebf9f1;
+}
+
+.dsc-bg-color-violet {
+  background: #7b61ff;
+}
+
+.dsc-bg-color-light-violet {
+  background: #f2efff;
+}
+
+.dsc-bg-color-light-blue {
+  background: #eef8ff;
+}

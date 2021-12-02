@@ -2,15 +2,15 @@ import React from 'react'
 import clsx from 'clsx'
 import { Spacing, Color as ColorMap } from '@ds.crisp/foundation'
 
-export interface ColorProps {
+interface ColorProps {
     hexCode?: string
+    color?: keyof typeof ColorMap
     width?: keyof typeof Spacing
     height?: keyof typeof Spacing
-    color?: keyof typeof ColorMap
     className?: string
 }
 
-export interface StyleProps {
+interface StyleProps {
     backgroundColor?: string
 }
 
@@ -22,9 +22,10 @@ const Color: React.FC<ColorProps> = ({
     className: classNameProp
 }) => {
     const className = clsx(
+        'dsc-atoms-color__container',
         {
             [`dsc-width-${width}`]: width,
-            [`dsc-width-${height}`]: height,
+            [`dsc-height-${height}`]: height,
             [`dsc-bg-color-${color}`]: color,
         },
         classNameProp,

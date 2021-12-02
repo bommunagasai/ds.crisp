@@ -1,5 +1,9 @@
 import Color from './atoms/Color'
+import { Container, Row, Col } from './atoms/Grid'
 
 export {
-  Color
+  Color,
+  Container,
+  Row,
+  Col,
 }

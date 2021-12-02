@@ -122,6 +122,10 @@
   background: #ced3d6;
 }
 
+.dsc-bg-color-lightness {
+  background: #f2f5f9;
+}
+
 .dsc-bg-color-shine {
   background: #fafafc;
 }
@@ -160,4 +164,8 @@
 
 .dsc-bg-color-light-blue {
   background: #eef8ff;
+}
+
+.dsc-atoms-color__container {
+  display: inline-block;
 }

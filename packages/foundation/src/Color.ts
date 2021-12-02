@@ -1,5 +1,3 @@
-
-
 const colors = {
   blue: 'blue',
   zero: 'zero',
@@ -13,6 +11,7 @@ const colors = {
   'medium-gray': 'medium-gray',
   'light-gray': 'light-gray',
   'light': 'light',
+  'lightness': 'lightness',
   'shine': 'shine',
   'red': 'red',
   'light-red': 'light-red',

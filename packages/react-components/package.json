@@ -2,7 +2,6 @@
   "name": "@ds.crisp/react-components",
   "version": "1.0.0",
   "main": "lib/index.js",
-  "private": true,
   "files": [
     "lib"
   ],

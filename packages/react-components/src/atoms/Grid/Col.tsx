@@ -32,10 +32,7 @@ const Col: React.FC<ColProps> = ({
       [`col-md-${md}`]: md,
       [`col-lg-${lg}`]: lg,
 
-      [`col-xs-offset-${offset}`]: xs && offset,
-      [`col-sm-offset-${offset}`]: sm && offset,
-      [`col-md-offset-${offset}`]: md && offset,
-      [`col-lg-offset-${offset}`]: lg && offset,
+      [`offset-${offset}`]: offset,
 
       [`col-xs-pull-${pull}`]: xs && pull,
       [`col-sm-pull-${pull}`]: sm && pull,

@@ -15,7 +15,7 @@ const Row: React.FC<RowProps> = ({
   const className = clsx(
     'row',
     {
-      'row-no-gutters': noGutters,
+      'no-gutters': noGutters,
     },
     classNameProp,
   )

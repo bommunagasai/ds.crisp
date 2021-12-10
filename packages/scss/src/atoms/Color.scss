@@ -5,6 +5,21 @@
   .dsc-bg-color-#{$color} {
       background: $value;
   }
+  .dsc-border-color-#{$color} {
+    border-color: $value;
+  }
+  .dsc-border-left-color-#{$color} {
+    border-left-color: $value !important;
+  }
+  .dsc-border-right-color-#{$color} {
+    border-right-color: $value !important;
+  }
+  .dsc-border-top-color-#{$color} {
+    border-top-color: $value !important;
+  }
+  .dsc-border-right-color-#{$color} {
+    border-right-color: $value !important;
+  }
 }
 
 .dsc-atoms-color__container {

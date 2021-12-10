@@ -8,10 +8,56 @@
     .dsc-height-#{$size} {
         height: $value;
     }
-}
 
-@each $color, $value in $colors {
-  .dsc-color-#{$color} {
-      width: $value;
-  }
+    .dsc-padding-#{$size} {
+        padding: $value;
+    }
+    .dsc-padding-x-#{$size} {
+        padding-left: $value;
+        padding-right: $value;
+    }
+    .dsc-padding-y-#{$size} {
+        padding-top: $value;
+        padding-bottom: $value;
+    }
+    .dsc-padding-l-#{$size} {
+        padding-left: $value 0;
+    }
+    .dsc-padding-r-#{$size} {
+        padding-right: $value 0;
+    }
+    .dsc-padding-t-#{$size} {
+        padding-top: $value 0;
+    }
+    .dsc-padding-b-#{$size} {
+        padding-bottom: $value 0;
+    }
+
+    .dsc-margin-#{$size} {
+        margin: $value;
+    }
+    .dsc-margin-x-#{$size} {
+        margin-left: $value;
+        margin-right: $value;
+    }
+    .dsc-margin-y-#{$size} {
+        margin-top: $value;
+        margin-bottom: $value;
+    }
+    .dsc-margin-l-#{$size} {
+        margin-left: $value 0;
+    }
+    .dsc-margin-r-#{$size} {
+        margin-right: $value 0;
+    }
+    .dsc-margin-t-#{$size} {
+        margin-top: $value 0;
+    }
+    .dsc-margin-b-#{$size} {
+        margin-bottom: $value 0;
+    }
+
+    .dsc-border-radius-#{$size} {
+        border-radius: $value;
+    }
 }

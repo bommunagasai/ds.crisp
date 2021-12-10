@@ -1,0 +1,22 @@
+.dsc-tag {
+  &__container {
+    display: inline-block;
+    border-radius: 4px;
+  }
+  &__size-sm {
+    font-size: 12px;
+    border-width: 1px;
+    border-style: solid;
+  }
+  &__size-md {
+    font-size: 16px;
+    border-width: 1.5px;
+    border-style: solid;
+  }
+  &__size-lg {
+    font-size: 18px;
+    border-width: 2px;
+    border-radius: 8px;
+    border-style: solid;
+  }
+}

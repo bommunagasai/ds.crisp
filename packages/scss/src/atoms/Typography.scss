@@ -1,0 +1,30 @@
+@import "foundation/all";
+
+@each $color, $value in $colors {
+  .dsc-font-color-#{$color} {
+      color: $value;
+  }
+}
+
+@each $f, $value in $fs {
+  .dsc-font-size-#{$f} {
+      font-size: $value;
+  }
+}
+
+@each $w, $value in $fw {
+  .dsc-font-weight-#{$w} {
+      font-weight: $value;
+  }
+}
+
+.dsc-h__container {
+  margin: 0;
+  padding: 0;
+}
+
+@each $h, $value in $hs {
+  .dsc-h-fs-#{$h} {
+      font-size: $value;
+  }
+}

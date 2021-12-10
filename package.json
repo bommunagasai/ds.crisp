@@ -19,7 +19,9 @@
       "playgrounds/*"
     ],
     "nohoist": [
-      "**/normalize-scss"
+      "**/normalize-scss",
+      "react",
+      "react-dom"
     ]
   }
 }

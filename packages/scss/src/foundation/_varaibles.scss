@@ -124,9 +124,18 @@ $fs: (
 $h-1: 1.375rem; // 22px
 $h-2: 1.375rem; // 22px
 $h-3: 1rem; // 16px
-$h-4: 1.125rem; // 18px
-$h-5: 0.75rem; // 12px
-$h-6: 0.75rem; // 12px
+$h-4: 2.125rem; // 18px
+$h-5: 1.75rem; // 12px
+$h-6: 1rem; // 12px
+
+$hs: (
+  1: 2.5rem, // 40px
+  2: 2.125rem, // 34px
+  3: 2rem, // 32px
+  4: 1.75rem, // 28px
+  5: 1.375rem, // 22px
+  6: 1rem, // 16px
+);
 
 /* Font weights */
 
@@ -137,6 +146,16 @@ $fw-semibold: 600;
 $fw-bold: 700;
 $fw-extrabold: 800;
 $fw-black: 900;
+
+$fw: (
+  light: 300,
+  normal: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  extrabold: 800,
+  black: 900,
+);
 
 /*=====  End of Typography  ======*/
 

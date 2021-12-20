@@ -6,6 +6,9 @@ import { Tag } from './atoms/Tag'
 import { Image } from './atoms/Image'
 import { SpinLoader } from './atoms/Loader'
 import { Card } from './atoms/Card'
+import { Icon } from './atoms/Icon'
+
+import { SearchBar } from './molecules/SearchBar'
 
 export {
   Color,
@@ -19,4 +22,6 @@ export {
   Image,
   SpinLoader,
   Card,
+  Icon,
+  SearchBar,
 }

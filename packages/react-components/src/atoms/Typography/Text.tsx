@@ -2,7 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 import { FontSize, FontWeight, Color, getClassName } from '@ds.crisp/foundation'
 
-interface TextProps {
+export interface TextProps {
   fontSize?: keyof typeof FontSize
   fontWeight?: keyof typeof FontWeight
   fontColor?: keyof typeof Color
@@ -25,13 +25,9 @@ const Text: React.FC<TextProps> = ({
       padding: 'none',
       margin: 'none',
     }),
-    classNameProp,
+    classNameProp
   )
-  return (
-    <p className={className}>
-      {children}
-    </p>
-  )
+  return <p className={className}>{children}</p>
 }
 
 export default Text

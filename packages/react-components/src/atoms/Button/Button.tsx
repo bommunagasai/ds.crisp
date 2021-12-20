@@ -2,7 +2,7 @@ import React from "react"
 import clsx from 'clsx'
 import { Spacing, Size, Color, getClassName } from '@ds.crisp/foundation'
 
-interface ButtonProps {
+export interface ButtonProps {
   children: React.ReactNode
   backgroundColor?: keyof typeof Color
   borderColor?: keyof typeof Color

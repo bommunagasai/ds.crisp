@@ -1,31 +1,20 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
-import Color from './Color'
+import Card from './Card'
 import '@ds.crisp/scss/lib/Color.css'
 import '@ds.crisp/scss/lib/Utilities.css'
 
-import { Spacing } from '@ds.crisp/foundation'
-
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Atoms/Color',
-  component: Color,
+  title: 'Atoms/Card',
+  component: Card,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes,
-  argTypes: {
-    hexCode: { control: 'color' },
-  },
-} as ComponentMeta<typeof Color>;
+  argTypes: {},
+} as ComponentMeta<typeof Card>;
 
-const Template: ComponentStory<typeof Color> = (args) => <Color {...args} />;
+const Template: ComponentStory<typeof Card> = (args) => <Card {...args} />;
 
 export const Default = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Default.args = {};
-
-export const Custom = Template.bind({});
-Custom.args = {
-  hexCode: '#CEFECE',
-  width: Spacing.xxl,
-  height: Spacing.xxl,
-};

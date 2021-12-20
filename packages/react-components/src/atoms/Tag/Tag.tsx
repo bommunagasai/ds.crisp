@@ -1,13 +1,19 @@
-import React from "react"
+import React from 'react'
 import clsx from 'clsx'
-import { Spacing, Size, FontWeight, Color, getClassName } from '@ds.crisp/foundation'
+import {
+  Spacing,
+  Size,
+  FontWeight,
+  Color,
+  getClassName,
+} from '@ds.crisp/foundation'
 
-interface TagProps {
+export interface TagProps {
   children: React.ReactNode
   backgroundColor?: keyof typeof Color
   borderColor?: keyof typeof Color
   fontColor?: keyof typeof Color
-  fontWeight?:  keyof typeof FontWeight
+  fontWeight?: keyof typeof FontWeight
   size?: keyof typeof Size
   className?: string
 }
@@ -23,7 +29,7 @@ const Tag: React.FC<TagProps> = ({
 }) => {
   let paddingX: string = ''
   let paddingY: string = ''
-  switch(size) {
+  switch (size) {
     case Size.sm:
       paddingX = Spacing.xs
       paddingY = Spacing.xxxs
@@ -42,7 +48,7 @@ const Tag: React.FC<TagProps> = ({
     {
       [`dsc-tag__size-${size}`]: size,
     },
-    getClassName({  
+    getClassName({
       backgroundColor,
       borderColor,
       fontColor,
@@ -50,13 +56,9 @@ const Tag: React.FC<TagProps> = ({
       paddingX,
       paddingY,
     }),
-    classNameProp,
+    classNameProp
   )
-  return (
-    <span className={className}>
-      {children}
-    </span>
-  )
+  return <span className={className}>{children}</span>
 }
 
 export default Tag

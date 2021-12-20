@@ -5,7 +5,7 @@ const Sass = require('node-sass')
 const getComponents = () => {
     let allComponents = []
 
-    const types = ['atoms']
+    const types = ['atoms', 'molecules']
 
     types.forEach(type => {
         const allFiles = Fs.readdirSync(`src/${type}`).map(file => ({
@@ -37,8 +37,25 @@ const compile = (path, fileName) => {
     )    
 }
 
+copyRecursiveSync = (src, dest) =>  {
+    const exists = Fs.existsSync(src);
+    const stats = exists && Fs.statSync(src);
+    const isDirectory = exists && stats.isDirectory();
+    if (isDirectory) {
+        const destExists = Fs.existsSync(dest);
+        if (!destExists) Fs.mkdirSync(dest);
+        Fs.readdirSync(src).forEach(function(childItemName) {
+            copyRecursiveSync(Path.join(src, childItemName),
+                            Path.join(dest, childItemName));
+        });
+    } else {
+      Fs.copyFileSync(src, dest);
+    }
+  };
+
 try {
     Fs.mkdirSync(Path.resolve('lib'))
+    Fs.mkdirSync(Path.resolve('lib/assets'))
 } catch(e) {}
 
 compile('src/global.scss', 'lib/global.css')
@@ -46,3 +63,5 @@ compile('src/global.scss', 'lib/global.css')
 getComponents().forEach(component => {
     compile(component.input, component.output)
 })
+
+copyRecursiveSync('src/assets', 'lib/assets');

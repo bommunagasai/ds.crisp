@@ -1,0 +1,22 @@
+@import 'foundation/all';
+
+.dsc-search-bar {
+  &__container {
+    display: flex;
+    padding: .5rem;
+    border-radius: 1rem;
+    .dsc-input-box {
+      border: none;
+      flex-grow: 1;
+      background: transparent;
+      padding-left: .5rem;
+      outline: none;
+      font-size: 1rem;
+      caret-color: $dark;
+    }
+
+    .dsc-end-icon-box {
+      cursor: pointer;
+    }
+  }
+}

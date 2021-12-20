@@ -1,7 +1,7 @@
 import React from 'react'
 import clsx from 'clsx'
 
-interface ContainerProps {
+export interface ContainerProps {
   fluid?: boolean
   sm?: boolean
   md?: boolean

@@ -9,6 +9,7 @@ interface ColProps {
   offset?: 0|1|2|3|4|5|6|7|8|9|10|11|12
   pull?: 0|1|2|3|4|5|6|7|8|9|10|11|12
   push?: 0|1|2|3|4|5|6|7|8|9|10|11|12
+  size?: 1|2|3|4|5|6|7|8|9|10|11|12
   children?: React.ReactNode
   className?: string
 }
@@ -21,6 +22,7 @@ const Col: React.FC<ColProps> = ({
   offset,
   pull,
   push,
+  size,
   className: classNameProp,
   children,
 }) => {
@@ -43,6 +45,8 @@ const Col: React.FC<ColProps> = ({
       [`col-sm-push-${push}`]: sm && push,
       [`col-md-push-${push}`]: md && push,
       [`col-lg-push-${push}`]: lg && push,
+
+      [`col-${size}`]: size,
     },
     classNameProp,
   )

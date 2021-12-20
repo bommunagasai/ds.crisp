@@ -1,2 +1,2 @@
-export { default as Text } from './Text'
-export { default as H } from './H'
+export { default as Text, TextProps } from './Text'
+export { default as H, HProps } from './H'

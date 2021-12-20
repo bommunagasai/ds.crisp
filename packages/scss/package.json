@@ -17,6 +17,7 @@
     "dev": "nodemon --watch src --exec yarn build -e scss"
   },
   "dependencies": {
+    "clsx": "^1.1.1",
     "normalize-scss": "^7.0.1"
   },
   "devDependencies": {

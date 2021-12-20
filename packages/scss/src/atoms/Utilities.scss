@@ -21,16 +21,16 @@
         padding-bottom: $value;
     }
     .dsc-padding-l-#{$size} {
-        padding-left: $value 0;
+        padding-left: $value;
     }
     .dsc-padding-r-#{$size} {
-        padding-right: $value 0;
+        padding-right: $value;
     }
     .dsc-padding-t-#{$size} {
-        padding-top: $value 0;
+        padding-top: $value;
     }
     .dsc-padding-b-#{$size} {
-        padding-bottom: $value 0;
+        padding-bottom: $value;
     }
 
     .dsc-margin-#{$size} {
@@ -45,16 +45,16 @@
         margin-bottom: $value;
     }
     .dsc-margin-l-#{$size} {
-        margin-left: $value 0;
+        margin-left: $value;
     }
     .dsc-margin-r-#{$size} {
-        margin-right: $value 0;
+        margin-right: $value;
     }
     .dsc-margin-t-#{$size} {
-        margin-top: $value 0;
+        margin-top: $value;
     }
     .dsc-margin-b-#{$size} {
-        margin-bottom: $value 0;
+        margin-bottom: $value;
     }
 
     .dsc-border-radius-#{$size} {

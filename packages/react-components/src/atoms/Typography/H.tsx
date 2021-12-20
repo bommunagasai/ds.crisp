@@ -1,10 +1,10 @@
-import React from "react"
-import clsx from "clsx"
+import React from 'react'
+import clsx from 'clsx'
 
 import { FontWeight, Color, getClassName } from '@ds.crisp/foundation'
 
-interface HProps {
-  level: 1|2|3|4|5|6
+export interface HProps {
+  level: 1 | 2 | 3 | 4 | 5 | 6
   fontWeight?: keyof typeof FontWeight
   fontColor?: keyof typeof Color
   className?: string
@@ -24,9 +24,9 @@ const H: React.FC<HProps> = ({
       [`dsc-h-fs-${level}`]: level,
     },
     getClassName({ fontColor, fontWeight }),
-    classNameProp,
+    classNameProp
   )
-  switch(level) {
+  switch (level) {
     case 1:
       return <h1 className={className}>{children}</h1>
     case 2:

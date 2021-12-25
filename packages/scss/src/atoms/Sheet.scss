@@ -1,0 +1,58 @@
+@import 'foundation/all';
+
+.dsc-sheet {
+  &__container {
+    position: fixed;
+    z-index: map-get($z-index, 'xl');
+    display: none;
+
+    &.show {
+      display: block;
+    }
+
+    &.position-top {
+      top: 0;
+      right: 0;
+      left: 0;
+    }
+
+    &.position-bottom {
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+
+    &.position-left {
+      bottom: 0;
+      top: 0;
+      left: 0;
+    }
+
+    &.position-right {
+      bottom: 0;
+      top: 0;
+      right: 0;
+    }
+  }
+  &__header {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: map-get($z-index, 'xl') + 10;
+  }
+  &__footer {
+    position: sticky;
+    position: -webkit-sticky;
+    bottom: 0;
+    z-index: map-get($z-index, 'xl') + 10;
+  }
+  &__overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: map-get($z-index, 'lg');
+    background-color: rgba(0,0,0,0.5)
+  }
+}

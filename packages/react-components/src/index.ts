@@ -7,6 +7,7 @@ import { Image } from './atoms/Image'
 import { SpinLoader } from './atoms/Loader'
 import { Card } from './atoms/Card'
 import { Icon } from './atoms/Icon'
+import { SheetContainer, SheetHeader, SheetFooter } from './atoms/Sheet'
 
 import { SearchBar } from './molecules/SearchBar'
 
@@ -24,4 +25,7 @@ export {
   Card,
   Icon,
   SearchBar,
+  SheetContainer,
+  SheetHeader,
+  SheetFooter,
 }

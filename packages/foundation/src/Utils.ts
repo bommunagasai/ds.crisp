@@ -26,6 +26,10 @@ interface classNameProps {
   marginT?: string
   marginB?: string
   borderRadius?: string
+  borderRadiusT?: string
+  borderRadiusB?: string
+  borderRadiusL?: string
+  borderRadiusR?: string
 }
 
 const getClassName = (props: classNameProps): string|undefined => {
@@ -55,6 +59,10 @@ const getClassName = (props: classNameProps): string|undefined => {
     marginT,
     marginB,
     borderRadius,
+    borderRadiusT,
+    borderRadiusB,
+    borderRadiusL,
+    borderRadiusR,
   } = props;
   return clsx(
     {
@@ -88,6 +96,10 @@ const getClassName = (props: classNameProps): string|undefined => {
       [`dsc-margin-b-${marginB}`]: marginB,
 
       [`dsc-border-radius-${borderRadius}`]: borderRadius,
+      [`dsc-border-radius-top-${borderRadiusT}`]: borderRadiusT,
+      [`dsc-border-radius-bottom-${borderRadiusB}`]: borderRadiusB,
+      [`dsc-border-radius-left-${borderRadiusL}`]: borderRadiusL,
+      [`dsc-border-radius-right-${borderRadiusR}`]: borderRadiusR,
     },
   )
 };

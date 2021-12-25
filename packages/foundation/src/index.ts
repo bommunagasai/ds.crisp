@@ -6,4 +6,12 @@ import Color from './Color'
 import Size from './Size'
 import { getClassName } from './Utils'
 
-export { FontSize, FontWeight, FontIcon, Spacing, Color, Size, getClassName }
+export {
+  FontSize,
+  FontWeight,
+  FontIcon,
+  Spacing,
+  Color,
+  Size,
+  getClassName,
+}

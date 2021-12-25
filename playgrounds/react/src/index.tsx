@@ -1,19 +1,21 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import clsx from 'clsx'
 import {
   Container,
   Row,
   Col,
   Text,
-  Image,
-  Tag,
   Icon,
+  Color,
   Card,
   SearchBar,
+  SheetContainer,
+  SheetHeader,
+  SheetFooter,
 } from '@ds.crisp/react-components'
 import {
   Color as ColorMap,
-  Size,
   FontWeight,
   FontSize,
   Spacing,
@@ -26,366 +28,123 @@ import '@ds.crisp/scss/lib/Image.css'
 import '@ds.crisp/scss/lib/Grid.css'
 import '@ds.crisp/scss/lib/Loader.css'
 import '@ds.crisp/scss/lib/Color.css'
-import '@ds.crisp/scss/lib/Typography.css'
 import '@ds.crisp/scss/lib/Utilities.css'
 import '@ds.crisp/scss/lib/Icons.css'
 import '@ds.crisp/scss/lib/Tag.css'
 import '@ds.crisp/scss/lib/SearchBar.css'
+import '@ds.crisp/scss/lib/Sheet.css'
+import RecentWorks from './RecentWorks'
 
+import './index.scss'
+
+const cardClassName = clsx(
+  'mh-80vh overflow-y-auto font-zero',
+  getClassName({ borderRadiusT: Spacing.xs })
+)
 ReactDOM.render(
   <Container>
     <Row>
-      <Col md={12} className="mb-3">
+      <RecentWorks />
+    </Row>
+    <SheetContainer bottom show>
+      <Container>
         <Row>
-          <Col>
-            <Tag backgroundColor={ColorMap['light-green']}>
-              <Text
-                fontWeight={FontWeight.black}
-                fontColor={ColorMap.green}
-              >
-                Notes App
-              </Text>
-            </Tag>
-          </Col>
+          <Col md={8} />
           <Col md={4}>
-            <SearchBar
-              placeholder="Search using keywords.."
-              startIcon={{ name: FontIcon.search, color: ColorMap.green }}
-              endIcon={{
-                name: FontIcon.settings,
-                color: ColorMap.green,
-                backgroundColor: ColorMap['light-green'],
-                onClick: (e: React.MouseEvent<HTMLDivElement>) =>
-                  console.log(e),
-              }}
-              backgroundColor={ColorMap['shine']}
-            />
+            <Card className={cardClassName}>
+              <Text fontWeight={FontWeight.bold} className="mb-1">
+                Theme
+              </Text>
+              <Card
+                borderRadius={Spacing.md}
+                className="d-inline-block"
+                padding={Spacing.xs}
+                backgroundColor={ColorMap['light-blue']}
+              >
+                <Color
+                  width={Spacing.md}
+                  height={Spacing.md}
+                  color={ColorMap.dark}
+                  className={getClassName({
+                    borderRadius: Spacing.xs,
+                    borderWidth: Spacing.xs,
+                  })}
+                />
+              </Card>
+              <Card
+                borderRadius={Spacing.md}
+                className="d-inline-block"
+                padding={Spacing.xs}
+              >
+                <Color
+                  width={Spacing.md}
+                  height={Spacing.md}
+                  className={getClassName({
+                    borderRadius: Spacing.xs,
+                    borderWidth: Spacing.xs,
+                  })}
+                />
+              </Card>
+              <Card
+                borderRadius={Spacing.md}
+                className="d-inline-block"
+                padding={Spacing.xs}
+                // backgroundColor={ColorMap['light-blue']}
+              >
+                <Color
+                  width={Spacing.md}
+                  height={Spacing.md}
+                  color={ColorMap.green}
+                  className={getClassName({ borderRadius: Spacing.xs })}
+                />
+              </Card>
+              <Card
+                borderRadius={Spacing.md}
+                className="d-inline-block"
+                padding={Spacing.xs}
+                // backgroundColor={ColorMap['light-blue']}
+              >
+                <Color
+                  width={Spacing.md}
+                  height={Spacing.md}
+                  color={ColorMap.red}
+                  className={getClassName({ borderRadius: Spacing.xs })}
+                />
+              </Card>
+              <Card
+                borderRadius={Spacing.md}
+                className="d-inline-block"
+                padding={Spacing.xs}
+                // backgroundColor={ColorMap['light-blue']}
+              >
+                <Color
+                  width={Spacing.md}
+                  height={Spacing.md}
+                  color={ColorMap.yellow}
+                  className={getClassName({ borderRadius: Spacing.xs })}
+                />
+              </Card>
+              <Card
+                borderRadius={Spacing.md}
+                className="d-inline-block"
+                padding={Spacing.xs}
+                // backgroundColor={ColorMap['light-blue']}
+              >
+                <Color
+                  width={Spacing.md}
+                  height={Spacing.md}
+                  color={ColorMap.violet}
+                  className={getClassName({ borderRadius: Spacing.xs })}
+                />
+              </Card>
+              <Text>
+                
+              </Text>
+            </Card>
           </Col>
         </Row>
-      </Col>
-      <Col md={4} size={4} className="mb-3">
-        <Card
-          borderRadius={Spacing.sm}
-          borderColor={ColorMap.yellow}
-          backgroundColor={ColorMap['shine']}
-        >
-          <div className="mb-2 d-flex justify-content-between">
-            <Icon
-              name="book"
-              className={getClassName({
-                fontSize: FontSize.xs,
-                backgroundColor: ColorMap['light-violet'],
-                borderRadius: Spacing.xs,
-                padding: Spacing.xxs,
-              })}
-            />
-            <Icon
-              name="more-horizontal"
-              color={ColorMap.gray}
-              className={getClassName({
-                fontSize: FontSize.xs,
-                borderRadius: Spacing.xs,
-                padding: Spacing.xxs,
-              })}
-            />
-          </div>
-          <Text fontWeight={FontWeight.bold} fontColor={ColorMap.dark}>
-            Storybook JS
-          </Text>
-          <Text
-            fontWeight={FontWeight.light}
-            fontSize={FontSize.xs}
-            fontColor={ColorMap.dark}
-          >
-            UI components library framework to showcase
-          </Text>
-        </Card>
-      </Col>
-
-      <Col md={4} size={4} className="mb-3">
-        <Card
-          borderRadius={Spacing.sm}
-          backgroundColor={ColorMap['light-yellow']}
-        >
-          <div className="mb-2 d-flex justify-content-between">
-            <Icon
-              name="bulb"
-              color={ColorMap.red}
-              oulined
-              className={getClassName({
-                fontSize: FontSize.xs,
-                backgroundColor: ColorMap['light-violet'],
-                borderRadius: Spacing.xs,
-                padding: Spacing.xxs,
-              })}
-            />
-            <Icon
-              name="more-horizontal"
-              color={ColorMap.gray}
-              className={getClassName({
-                fontSize: FontSize.xs,
-
-                borderRadius: Spacing.xs,
-                padding: Spacing.xxs,
-              })}
-            />
-          </div>
-          <Text fontWeight={FontWeight.bold} fontColor={ColorMap.yellow}>
-            React JS tips
-          </Text>
-          <Text
-            fontWeight={FontWeight.light}
-            fontSize={FontSize.xs}
-            fontColor={ColorMap.yellow}
-          >
-            Experimental framwork to create awesome single page applications
-          </Text>
-        </Card>
-      </Col>
-
-      <Col md={4} size={4} className="mb-3">
-        <Card borderRadius={Spacing.sm} backgroundColor={ColorMap['shine']}>
-          <div className="mb-2 d-flex justify-content-between">
-            <Icon
-              name="color-palette"
-              color={ColorMap.green}
-              oulined
-              className={getClassName({
-                fontSize: FontSize.xs,
-                backgroundColor: ColorMap['light-green'],
-                borderRadius: Spacing.xs,
-                padding: Spacing.xxs,
-              })}
-            />
-            <Icon
-              name="more-horizontal"
-              color={ColorMap.gray}
-              className={getClassName({
-                fontSize: FontSize.xs,
-
-                borderRadius: Spacing.xs,
-                padding: Spacing.xxs,
-              })}
-            />
-          </div>
-          <Text fontWeight={FontWeight.bold} fontColor={ColorMap.violet}>
-            Pouch DB
-          </Text>
-          <Text
-            fontWeight={FontWeight.light}
-            fontSize={FontSize.xs}
-            fontColor={ColorMap.violet}
-          >
-            Offline database to store data
-          </Text>
-        </Card>
-      </Col>
-
-      <Col md={4} size={4} className="mb-3">
-        <Card
-          borderRadius={Spacing.sm}
-          backgroundColor={ColorMap['light-yellow']}
-        >
-          <div className="mb-2 d-flex justify-content-between">
-            <Icon
-              name="gift"
-              color={ColorMap.green}
-              oulined
-              className={getClassName({
-                fontSize: FontSize.xs,
-                backgroundColor: ColorMap['light-green'],
-                borderRadius: Spacing.xs,
-                padding: Spacing.xxs,
-              })}
-            />
-            <Icon
-              name="more-horizontal"
-              color={ColorMap.gray}
-              className={getClassName({
-                fontSize: FontSize.xs,
-
-                borderRadius: Spacing.xs,
-                padding: Spacing.xxs,
-              })}
-            />
-          </div>
-          <Text fontWeight={FontWeight.bold} fontColor={ColorMap.yellow}>
-            React JS tips
-          </Text>
-          <Text
-            fontWeight={FontWeight.light}
-            fontSize={FontSize.xs}
-            fontColor={ColorMap.yellow}
-          >
-            Experimental framwork to create awesome single page applications
-          </Text>
-        </Card>
-      </Col>
-
-<Col md={4} size={4} className="mb-3">
-  <Card
-    borderRadius={Spacing.sm}
-    backgroundColor={ColorMap['light-violet']}
-  >
-    <div className="mb-2 d-flex justify-content-between">
-      <Icon
-        name="film"
-        color={ColorMap.violet}
-        oulined
-        className={getClassName({
-          fontSize: FontSize.xs,
-          backgroundColor: ColorMap['light-green'],
-          borderRadius: Spacing.xs,
-          padding: Spacing.xxs,
-        })}
-      />
-      <Icon
-        name="more-horizontal"
-        color={ColorMap.gray}
-        className={getClassName({
-          fontSize: FontSize.xs,
-
-          borderRadius: Spacing.xs,
-          padding: Spacing.xxs,
-        })}
-      />
-    </div>
-    <Text fontWeight={FontWeight.bold} fontColor={ColorMap.violet}>
-      Pouch DB
-    </Text>
-    <Text
-      fontWeight={FontWeight.light}
-      fontSize={FontSize.xs}
-      fontColor={ColorMap.violet}
-    >
-      Offline database to store data
-    </Text>
-  </Card>
-</Col>
-
-<Col md={4} size={4} className="mb-3">
-  <Card
-    borderRadius={Spacing.sm}
-    backgroundColor={ColorMap['light-violet']}
-  >
-    <div className="mb-2 d-flex justify-content-between">
-      <Icon
-        name="film"
-        color={ColorMap.violet}
-        oulined
-        className={getClassName({
-          fontSize: FontSize.xs,
-          backgroundColor: ColorMap['light-green'],
-          borderRadius: Spacing.xs,
-          padding: Spacing.xxs,
-        })}
-      />
-      <Icon
-        name="more-horizontal"
-        color={ColorMap.gray}
-        className={getClassName({
-          fontSize: FontSize.xs,
-
-          borderRadius: Spacing.xs,
-          padding: Spacing.xxs,
-        })}
-      />
-    </div>
-    <Text fontWeight={FontWeight.bold} fontColor={ColorMap.violet}>
-      Pouch DB
-    </Text>
-    <Text
-      fontWeight={FontWeight.light}
-      fontSize={FontSize.xs}
-      fontColor={ColorMap.violet}
-    >
-      Offline database to store data
-    </Text>
-  </Card>
-</Col>
-
-<Col md={4} size={4} className="mb-3">
-  <Card
-    borderRadius={Spacing.sm}
-    backgroundColor={ColorMap['light-violet']}
-  >
-    <div className="mb-2 d-flex justify-content-between">
-      <Icon
-        name="film"
-        color={ColorMap.violet}
-        oulined
-        className={getClassName({
-          fontSize: FontSize.xs,
-          backgroundColor: ColorMap['light-green'],
-          borderRadius: Spacing.xs,
-          padding: Spacing.xxs,
-        })}
-      />
-      <Icon
-        name="more-horizontal"
-        color={ColorMap.gray}
-        className={getClassName({
-          fontSize: FontSize.xs,
-
-          borderRadius: Spacing.xs,
-          padding: Spacing.xxs,
-        })}
-      />
-    </div>
-    <Text fontWeight={FontWeight.bold} fontColor={ColorMap.violet}>
-      Pouch DB
-    </Text>
-    <Text
-      fontWeight={FontWeight.light}
-      fontSize={FontSize.xs}
-      fontColor={ColorMap.violet}
-    >
-      Offline database to store data
-    </Text>
-  </Card>
-</Col>
-
-<Col md={4} size={4} className="mb-3">
-  <Card
-    borderRadius={Spacing.sm}
-    backgroundColor={ColorMap['light-violet']}
-  >
-    <div className="mb-2 d-flex justify-content-between">
-      <Icon
-        name="film"
-        color={ColorMap.violet}
-        oulined
-        className={getClassName({
-          fontSize: FontSize.xs,
-          backgroundColor: ColorMap['light-green'],
-          borderRadius: Spacing.xs,
-          padding: Spacing.xxs,
-        })}
-      />
-      <Icon
-        name="more-horizontal"
-        color={ColorMap.gray}
-        className={getClassName({
-          fontSize: FontSize.xs,
-
-          borderRadius: Spacing.xs,
-          padding: Spacing.xxs,
-        })}
-      />
-    </div>
-    <Text fontWeight={FontWeight.bold} fontColor={ColorMap.violet}>
-      Pouch DB
-    </Text>
-    <Text
-      fontWeight={FontWeight.light}
-      fontSize={FontSize.xs}
-      fontColor={ColorMap.violet}
-    >
-      Offline database to store data
-    </Text>
-  </Card>
-</Col>
-    </Row>
+      </Container>
+    </SheetContainer>
   </Container>,
   document.querySelector('#root')
 )

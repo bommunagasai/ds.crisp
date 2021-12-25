@@ -1,0 +1,35 @@
+.mh-80vh {
+  max-height: 80vh;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.mw-100 {
+  max-width: 200px;
+}
+
+.font-zero {
+  font-size: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

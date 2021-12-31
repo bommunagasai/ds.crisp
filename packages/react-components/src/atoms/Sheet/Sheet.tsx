@@ -36,7 +36,7 @@ export const SheetContainer: React.FC<SheetContainerProps> = ({
   }, [show])
   return (
     <>
-      <div className="dsc-sheet__overlay" />
+      {show && <div className="dsc-sheet__overlay" />}
       <div className={className}>{children}</div>
     </>
   )

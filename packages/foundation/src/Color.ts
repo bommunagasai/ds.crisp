@@ -22,6 +22,7 @@ const colors = {
   'violet': 'violet',
   'light-violet': 'light-violet',
   'light-blue': 'light-blue',
+  transparent: 'transparent',
 }
 
 export default Object.freeze(colors)

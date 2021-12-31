@@ -1046,6 +1046,10 @@
   color: #eef8ff;
 }
 
+.dsc-font-color-transparent {
+  color: transparent;
+}
+
 .dsc-font-size-xs {
   font-size: 0.75rem;
 }
@@ -1673,6 +1677,30 @@
 
 .dsc-border-right-color-light-blue {
   border-right-color: #eef8ff !important;
+}
+
+.dsc-bg-color-transparent {
+  background: transparent;
+}
+
+.dsc-border-color-transparent {
+  border-color: transparent;
+}
+
+.dsc-border-left-color-transparent {
+  border-left-color: transparent !important;
+}
+
+.dsc-border-right-color-transparent {
+  border-right-color: transparent !important;
+}
+
+.dsc-border-top-color-transparent {
+  border-top-color: transparent !important;
+}
+
+.dsc-border-right-color-transparent {
+  border-right-color: transparent !important;
 }
 
 .dsc-z-index-zero {

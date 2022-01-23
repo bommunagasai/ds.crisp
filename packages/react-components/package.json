@@ -50,5 +50,9 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@ds.crisp/foundation": "^0.2.1",
+    "@ds.crisp/scss": "^0.2.1"
   }
 }

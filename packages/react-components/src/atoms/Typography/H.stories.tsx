@@ -4,7 +4,6 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 import H from './H'
 import '@ds.crisp/scss/lib/Color.css'
 import '@ds.crisp/scss/lib/Utilities.css'
-import '@ds.crisp/scss/lib/Typography.css'
 
 import { Color, Size } from '@ds.crisp/foundation'
 

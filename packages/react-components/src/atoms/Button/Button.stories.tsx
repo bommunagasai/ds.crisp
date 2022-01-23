@@ -6,7 +6,6 @@ import Button from './Button'
 import '@ds.crisp/scss/lib/Button.css'
 import '@ds.crisp/scss/lib/Color.css'
 import '@ds.crisp/scss/lib/Utilities.css'
-import '@ds.crisp/scss/lib/Typography.css'
 
 import { Color as ColorMap } from '@ds.crisp/foundation'
 
@@ -15,9 +14,7 @@ export default {
   title: 'Atoms/Button',
   component: Button,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes,
-  argTypes: {
-    hexCode: { control: 'color' },
-  },
+  argTypes: {},
 } as ComponentMeta<typeof Button>
 
 const Template: ComponentStory<typeof Button> = (args) => (

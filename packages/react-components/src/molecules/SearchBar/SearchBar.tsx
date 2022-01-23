@@ -10,7 +10,7 @@ import {
 import { Icon, IconProps } from '../../atoms/Icon'
 import { Card, CardProps } from '../../atoms/Card'
 
-interface SearchBarProps {
+export interface SearchBarProps {
   placeholder?: string
   startIcon: {
     name: keyof typeof FontIcon
